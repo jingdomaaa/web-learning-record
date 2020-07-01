@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        div {
+            height: 100px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="button" value="设置边框" id="btnOne"/>
+    <input type="button" value="设置文本" id="btnTwo"/>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
+<!-- 需求:点击按钮给三个div设置边框和文本 -->
+<script>
+    //入口函数
+    window.onload = function() {
+        //1.先获取对应元素
+        var btnOne = document.getElementById("btnOne");
+        var btnTwo = document.getElementById("btnTwo");
+        var divs = document.getElementsByTagName("div");
+        //2.给btnOne按钮设置点击事件
+        btnOne.onclick = function() {
+            for(var i = 0; i < divs.length; i++) {
+                divs[i].style.border = "1px solid red";
+            }
+        }
+        //3.给btnTwo按钮设置点击事件
+        btnTwo.onclick = function() {
+            for (let i = 0; i < divs.length; i++) {
+                divs[i].textContent = "我是设置的文本"; 
+                
+            }
+        }
+    }
+     
+    //再来一个入口函数:
+    window.onload = function() {
+        console.log("这里是第二个入口函数")
+    }
+
+
+    //分析以下,原生js的缺点:
+    //1.不能添加多个入口函数(window.onload),如果添加了多个入口函数,后面的会把前面的给覆盖
+    //2.原生js的api名称都过长,难于记忆
+    //3.原生js有时出现代码冗余
+    //4.原生js中有些属性或者方法对于有的浏览器会有兼容问题
+    //5.原生js容错率比较低,前面的代码出先问题,后面的代码运行不了
+
+</script>

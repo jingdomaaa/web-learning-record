@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标题</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .change {
+            background-color: purple;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">文本</div>
+    <script>
+        //1.使用element.style获得修改元素样式,样式较少或者功能简单的情况下使用
+        var test = document.querySelector('div');
+        test.onclick = function() {
+            // this.style.backgroundColor = 'purple';
+            // this.style.color = '#fff';
+            // this.style.fontSize = '25px';
+            // this.style.marginTop = '100px';
+        //2.可以通过修改元素className更改元素样式,适合样式较多或者功能复杂的情况
+        //3.className会覆盖原先的类名
+            // this.className = 'change';
+        //4.如果想保留原先的类名,可以这么做
+            this.className = 'first change';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    //1.jquery写法有两种
+    // //1.1
+    // $(document).ready(function() {
+
+    // });
+    // //1.2
+    // $(function() {
+
+    // });
+
+    //2.jquery入口函数和Window.onload入口函数的区别
+        //2.1 window.onload入口函数不能写多个,但是jquery的入口函数可以写多个
+        //2.2 执行时机不同:jquery入口函数要快于window.onload
+            //jquery入口函数要等待页面上的dom树加载完后执行
+            //window.onload要等待页面上所有的资源(外部css/js连接,图片,dom树)都加载完后执行
+
+    window.onload = function() {
+        console.log("我是window.onload")
+    }
+
+    $(function() {
+        console.log("我是jquery入口函数");
+    });
+
+    $(function() {
+        console.log("我又是一个入口函数");
+    });
+</script>

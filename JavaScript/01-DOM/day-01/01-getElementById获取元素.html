@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+</head>
+<body>
+    <div id="time">2019-12-29</div>
+    <script>
+        //1.因为文档页面是是从上往下加载,所以得先有标签,因此script写在标签的下面
+        //2.get:获得 element:元素 by:通过
+        var timer = document.getElementById('time');
+        //3.参数id是大小写敏感的字符串
+        console.log(timer);
+        //4.返回的是一个元素对象
+        console.log(typeof timer);
+        //5.console.dir:打印返回的元素对象,更好的查看里面的属性和方法
+        console.dir(timer);
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标题</title>
+    <style>
+        .box {
+            /* position设置对象的定位方式,relative定义父级,认为是绝对定位声明 */
+            position: relative;
+            width: 400px;
+            /* 去掉div边框 */
+            border-bottom: 1px solid #ccc;
+            margin: 100px auto;
+        }
+
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            /* 去掉输入边框 */
+            outline: none;
+        }
+
+        .box img {
+            /* absolute使用绝对定位 可以使用left/right和top/bottom进行定位设置 */
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="">
+            <img src="images/close.png" alt="" id="eye">
+        </label>
+        <input type="password" name="" id="pwd">
+    </div>
+    <script>
+        var eye = document.getElementById('eye');
+        var pwd = document.getElementById('pwd');
+        var flag = 0;
+        eye.onclick = function() {
+            if (flag == 0) {
+                pwd.type = 'text';
+                flag = 1;
+                eye.src = 'images/open.png';
+            } else {
+                pwd.type = 'password';
+                flag = 0;
+                eye.src = 'images/close.png';
+            }
+        }
+    </script>
+</body>
+</html>

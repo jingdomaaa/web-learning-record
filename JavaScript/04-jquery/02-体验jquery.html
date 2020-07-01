@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        div {
+            height: 100px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="button" value="设置边框" id="btnOne"/>
+    <input type="button" value="设置文本" id="btnTwo"/>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
+<!-- 需求:点击按钮给三个div设置边框和文本 -->
+<script src="jquery-3.5.1.js"></script>
+<script>
+    //入口函数
+    $(document).ready(function() {
+        //设置边框
+        $('#btnOne').click(function(){
+            $('div').css('border', '1px solid red');
+        });
+
+        //设置文本
+        $('#btnTwo').click(function() {
+            $('div').text('这里是设置的文本');
+        });
+    });
+
+    $(document).ready(function() {
+        console.log("第二个入口函数");
+    });
+
+
+    //jquery的优势
+    //1.可以写多个入口函数
+    //2.api名字都容易记忆
+    //3.代码简介(隐式迭代)
+    //4.帮我们解决了浏览器兼容问题
+    //5.容错率较高,前面的代码出了问题后面的代码不受影响
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标题</title>
+</head>
+<body>
+    <button id="knowlegde">知识</button>
+    <button id="power">力量</button> <br>
+    <img src="images/knowlegde.jpg" alt="" title="知识">
+
+    <script>
+        //修改元素属性 src
+        //1.获取元素
+        var knowlegde = document.getElementById('knowlegde');
+        var power = document.getElementById('power');
+        var img = document.querySelector('img');
+        //2.注册事件
+        //3.添加事件处理函数
+        power.onclick = function() {
+            img.src = 'images/power.jpg';
+            img.title = '力量';
+        }
+        knowlegde.onclick = function() {
+            img.src = 'images/knowlegde.jpg';
+            img.title = '知识';
+        }
+    </script>
+</body>
+</html>
